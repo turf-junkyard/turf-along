@@ -22,7 +22,7 @@ test('turf-along', function (t) {
     	t.equal(f.type, 'Feature');
     	t.equal(f.geometry.type, 'Point');
     });
-    t.equal(fc.features, 8);
+    t.equal(fc.features.length, 8);
     t.equal(fc.features[7].geometry.coordinates[0], pt8.geometry.coordinates[0]);
     t.equal(fc.features[7].geometry.coordinates[1], pt8.geometry.coordinates[1]);
 
