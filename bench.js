@@ -38,7 +38,7 @@ var line = {
 
 var route = JSON.parse(fs.readFileSync(__dirname + '/fixtures/route.geojson'));
 
-var suite = new Benchmark.Suite('turf-distance');
+var suite = new Benchmark.Suite('turf-along');
 suite
   .add('turf-along',function () {
     along(line, 1, 'miles');
