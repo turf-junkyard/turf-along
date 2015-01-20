@@ -16,7 +16,7 @@ module.exports = function (line, dist, units) {
       if(!overshot) return point(coords[i]);
       else {
         var direction = bearing(point(coords[i]), point(coords[i-1])) - 180;
-        var interpolated = destination(point(coords[i]), overshot, direction, units)
+        var interpolated = destination(point(coords[i]), overshot, direction, units);
         return interpolated;
       }
     }
@@ -24,5 +24,5 @@ module.exports = function (line, dist, units) {
       travelled += distance(point(coords[i]), point(coords[i+1]), units);
     }
   }
-  return point(coords.length-1);
+  return point(coords[coords.length - 1]);
 }
