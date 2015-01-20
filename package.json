@@ -24,9 +24,13 @@
   },
   "homepage": "https://github.com/Turfjs/turf-along",
   "devDependencies": {
-    "tape": "^3.4.0"
+    "tape": "^3.4.0",
+    "turf-featurecollection": "^1.0.0"
   },
   "dependencies": {
-    "turf-distance": "^1.0.0"
+    "turf-bearing": "^1.0.0",
+    "turf-destination": "^1.0.0",
+    "turf-distance": "^1.0.0",
+    "turf-point": "^1.2.1"
   }
 }
