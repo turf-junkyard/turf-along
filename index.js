@@ -56,7 +56,7 @@ module.exports = function (line, dist, units) {
   else throw new Error('input must be a LineString Feature or Geometry');
 
   var travelled = 0;
-  for(var i = 0; i < coords.length-1; i++) {
+  for(var i = 0; i < coords.length - 1; i++) {
     if(travelled >= dist) {
       var overshot = dist - travelled;
       if(!overshot) return point(coords[i]);
