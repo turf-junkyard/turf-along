@@ -1,32 +1,27 @@
-turf-along
----
-[![Build Status](https://travis-ci.org/Turfjs/turf-along.svg?branch=master)](https://travis-ci.org/Turfjs/turf-along)
+# turf-along
+
+[![build status](https://secure.travis-ci.org/Turfjs/turf-along.png)](http://travis-ci.org/Turfjs/turf-along)
+
+
+
+
+### `turf.along(Line, Distance, [units=miles])`
 
 Returns a point at a specified distance along a line.
 
-###Install
 
-```sh
-npm install turf-along
-```
+### Parameters
 
-###Parameters
+| parameter       | type       | description                                               |
+| --------------- | ---------- | --------------------------------------------------------- |
+| `Line`          | LineString | to move along                                             |
+| `Distance`      | Number     | to move                                                   |
+| `[units=miles]` | String     | _optional:_ can be degrees, radians, miles, or kilometers |
 
-|name|description|
-|---|---|
-|line|LineString feature or geometry|
-|distance|distance to move|
-|units|'miles', 'kilometers', 'degrees' or 'radians'|
 
-###Usage
+### Example
 
 ```js
-along(line, distance, units)
-```
-
-###Example
-
-```javascript
 var line = {
   "type": "Feature",
   "properties": {},
@@ -61,5 +56,21 @@ var line = {
   }
 }
 
-console.log(turf.along(line, 1, 'miles'));
+var along = turf.along(line, 1, 'miles');
+//=along
 ```
+
+## Installation
+
+Requires [nodejs](http://nodejs.org/).
+
+```sh
+$ npm install turf-along
+```
+
+## Tests
+
+```sh
+$ npm test
+```
+
