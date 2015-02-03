@@ -12,18 +12,30 @@ var destination = require('turf-destination');
  * @param {String} [units=miles] can be degrees, radians, miles, or kilometers
  * @return {Point} Point along the line at `distance` distance
  * @example
- * var line = turf.linestring([
- *  [-77.031669, 38.878605],
- *  [-77.029609, 38.881946],
- *  [-77.020339, 38.884084],
- *  [-77.025661, 38.885821],
- *  [-77.021884, 38.889563],
- *  [-77.019824, 38.892368]
- * ]);
+ * var line = {
+ *   "type": "Feature",
+ *   "properties": {},
+ *   "geometry": {
+ *     "type": "LineString",
+ *     "coordinates": [
+ *       [-77.031669, 38.878605],
+ *       [-77.029609, 38.881946],
+ *       [-77.020339, 38.884084],
+ *       [-77.025661, 38.885821],
+ *       [-77.021884, 38.889563],
+ *       [-77.019824, 38.892368]
+ *     ]
+ *   }
+ * };
  *
  * var along = turf.along(line, 1, 'miles');
  *
- * //=along
+ * var result = {
+ *   "type": "FeatureCollection",
+ *   "features": [line, along]
+ * };
+ *
+ * //=result
  */
 module.exports = function (line, dist, units) {
   var coords;
