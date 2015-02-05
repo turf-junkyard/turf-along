@@ -7,6 +7,7 @@ var destination = require('turf-destination');
  * Takes a {@link LineString} feature and returns a {@link Point} feature at a specified distance along a line.
  *
  * @module turf/along
+ * @category measurement
  * @param {LineString} line a LineString feature
  * @param {Number} distance distance along the line
  * @param {String} [units=miles] can be degrees, radians, miles, or kilometers
