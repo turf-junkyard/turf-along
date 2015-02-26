@@ -4,7 +4,7 @@ var bearing = require('turf-bearing');
 var destination = require('turf-destination');
 
 /**
- * Takes a {@link LineString} feature and returns a {@link Point} feature at a specified distance along a line.
+ * Takes a {@link LineString|line} and returns a {@link Point|point} at a specified distance along the line.
  *
  * @module turf/along
  * @category measurement
