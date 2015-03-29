@@ -61,4 +61,4 @@ module.exports = function (line, dist, units) {
     }
   }
   return point(coords[coords.length - 1]);
-}
+};
